@@ -61,11 +61,7 @@ void adicionar_fim_lista(Lista *lista, int valor) {
 
 
 
-bool remover_inicio_lista(Lista *ptr_lista) {
-
-    //TODO: Implemente esta função.
-    //Teste
-    void remover_no_inicio(Lista *lista) {
+bool remover_no_inicio(Lista *lista) {
     No *remover = lista->cabeca
     lista->cabeca = remover->proximo;
     free(*remover);
@@ -74,10 +70,8 @@ bool remover_inicio_lista(Lista *ptr_lista) {
 
 }
 
-bool remover_fim_lista(Lista *ptr_lista) {
+bool remover_no_fim(Lista *lista) {
 
-
-    //TODO: Implemente esta função.
     No *auxiliar, *novo = (No*)malloc(sizeof(No));
 
     if(novo == NULL){
@@ -93,7 +87,7 @@ bool remover_fim_lista(Lista *ptr_lista) {
     lista->tamanho = lista->tamanho - 1;
 
     return true;
-
+}
 
 
 
